@@ -1,0 +1,23 @@
+name: Service CI/CD
+
+on:
+  push:
+    branches:
+      - dev
+      - master
+  workflow_dispatch:
+
+jobs:
+  service:
+    uses: PipelineIQproject/pipeline_main/.github/workflows/reusable-node-service-ci.yml@dev
+    with:
+      service_name: pipeline-runner-service
+      image_name: final_capstone-pipeline-runner-service
+      dockerfile: services/pipeline-runner-service/Dockerfile
+      node_project_dir: services/pipeline-runner-service
+      chart_path: pipeline-runner-service
+      container_port: "8080"
+      smoke_mode: container
+      sonar_organization: pipelineiqproject
+      sonar_project_key: pipelineiq-pipeline-runner-service
+    secrets: inherit
