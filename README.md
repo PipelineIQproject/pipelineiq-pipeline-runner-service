@@ -8,7 +8,7 @@ Independent repository for the PipelineIQ pipeline runner worker.
 docker build -t <acr-login-server>/final_capstone-pipeline-runner-service:local -f services/pipeline-runner-service/Dockerfile .
 ```
 
-## Local Run
+## Local Run 
 
 This service expects PipelineIQ environment variables from Kubernetes ConfigMap and Key Vault secrets.
 
