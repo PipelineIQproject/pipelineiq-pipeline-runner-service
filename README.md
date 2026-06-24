@@ -6,7 +6,7 @@ Independent repository for the PipelineIQ pipeline runner worker.
 
 ```bash
 docker build -t <acr-login-server>/final_capstone-pipeline-runner-service:local -f services/pipeline-runner-service/Dockerfile .
-```
+``` 
 
 ## Local Run  
 
